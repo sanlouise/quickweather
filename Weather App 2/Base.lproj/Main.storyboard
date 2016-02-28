@@ -1,25 +1,108 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Weather_App_2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="river.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="UlV-w8-2kR">
+                                <rect key="frame" x="0.0" y="-9" width="320" height="577"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find Your City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfu-aw-nej">
+                                <rect key="frame" x="89" y="113" width="143" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="CeT-vF-EL7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.99607473611831665" green="0.99220293760299683" blue="0.99199241399765015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcN-uZ-FUf">
+                                <rect key="frame" x="20" y="317" width="280" height="226"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="0.99606269598007202" green="0.9921298623085022" blue="0.99607473611831665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E.g. Amsterdam" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Prn-f7-JpI">
+                                <rect key="frame" x="20" y="171" width="280" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OFt-Tl-Obq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2x-88-WjU">
+                                <rect key="frame" x="131" y="219" width="59" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="59" id="LM6-hD-b1A"/>
+                                    <constraint firstAttribute="height" constant="30" id="S1t-Eh-Vid"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Enter">
+                                    <color key="titleColor" red="0.99607473611831665" green="0.99220293760299683" blue="0.99199241399765015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="findWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="csP-3Q-qYv"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ji-JL-tCj">
+                                <rect key="frame" x="0.0" y="33" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="VTo-JI-3HB"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Quick Weather" id="6vO-2q-Pe8"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UlV-w8-2kR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-9" id="5qJ-Je-txP"/>
+                            <constraint firstItem="gfu-aw-nej" firstAttribute="top" secondItem="9ji-JL-tCj" secondAttribute="bottom" constant="36" id="7Ee-Pa-z4D"/>
+                            <constraint firstItem="Prn-f7-JpI" firstAttribute="trailing" secondItem="UcN-uZ-FUf" secondAttribute="trailing" id="9DO-ia-m4d"/>
+                            <constraint firstItem="UlV-w8-2kR" firstAttribute="leading" secondItem="9ji-JL-tCj" secondAttribute="leading" id="APY-eB-ghy"/>
+                            <constraint firstItem="Prn-f7-JpI" firstAttribute="centerX" secondItem="G2x-88-WjU" secondAttribute="centerX" id="Eah-gh-DyC"/>
+                            <constraint firstItem="9ji-JL-tCj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Gd5-Dy-mxS"/>
+                            <constraint firstItem="UcN-uZ-FUf" firstAttribute="top" secondItem="G2x-88-WjU" secondAttribute="bottom" constant="68" id="MK8-Ya-dyv"/>
+                            <constraint firstItem="9ji-JL-tCj" firstAttribute="centerX" secondItem="gfu-aw-nej" secondAttribute="centerX" id="R91-Tq-1tG"/>
+                            <constraint firstItem="gfu-aw-nej" firstAttribute="centerX" secondItem="Prn-f7-JpI" secondAttribute="centerX" id="UwI-Hs-qu0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UcN-uZ-FUf" secondAttribute="bottom" constant="25" id="Xbt-IG-Mh7"/>
+                            <constraint firstItem="gfu-aw-nej" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="73" id="YaG-dO-yNd"/>
+                            <constraint firstAttribute="trailing" secondItem="9ji-JL-tCj" secondAttribute="trailing" id="Yeb-fW-Ytb"/>
+                            <constraint firstItem="G2x-88-WjU" firstAttribute="top" secondItem="Prn-f7-JpI" secondAttribute="bottom" constant="18" id="bOk-lX-6nV"/>
+                            <constraint firstItem="Prn-f7-JpI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="eIa-GF-tC4"/>
+                            <constraint firstItem="UlV-w8-2kR" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="g7Q-dm-ahm"/>
+                            <constraint firstItem="9ji-JL-tCj" firstAttribute="trailing" secondItem="UlV-w8-2kR" secondAttribute="trailing" id="mPb-rS-7WV"/>
+                            <constraint firstItem="UcN-uZ-FUf" firstAttribute="leading" secondItem="Prn-f7-JpI" secondAttribute="leading" id="me6-R6-cxs"/>
+                            <constraint firstItem="9ji-JL-tCj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="s2x-pS-kFI"/>
+                            <constraint firstItem="Prn-f7-JpI" firstAttribute="top" secondItem="gfu-aw-nej" secondAttribute="bottom" constant="26" id="sGS-gc-OSk"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="cityTextField" destination="Prn-f7-JpI" id="RQJ-XZ-ACi"/>
+                        <outlet property="resultLabel" destination="UcN-uZ-FUf" id="t0f-J5-SfL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="467" y="406"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="river.jpg" width="4390" height="2948"/>
+    </resources>
 </document>
