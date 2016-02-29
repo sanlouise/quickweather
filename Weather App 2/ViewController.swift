@@ -53,9 +53,12 @@ class ViewController: UIViewController {
                             
                             let weatherSummary = weatherArray[0].stringByReplacingOccurrencesOfString("&deg;", withString: "º")
                             
+                            
                             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                                 
-                                self.labelUpcomingDays.text = "The Next Three Days:"
+                                self.labelUpcomingDays.text = String("3-day forecast for " +
+                                    self.cityTextField.text!)
+
                                 
                                 self.resultLabel.text = weatherSummary
                                 
@@ -76,7 +79,7 @@ class ViewController: UIViewController {
             
             if wasSuccessful == false {
                 
-                self.resultLabel.text = "Oops! Are you sure you entered a real city?"
+                self.resultLabel.text = ""
                 
                 
             }
