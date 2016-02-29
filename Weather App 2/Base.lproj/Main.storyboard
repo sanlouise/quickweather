@@ -30,12 +30,6 @@
                                 <color key="textColor" red="0.99607473611831665" green="0.99220293760299683" blue="0.99199241399765015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcN-uZ-FUf">
-                                <rect key="frame" x="20" y="317" width="280" height="226"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" red="0.99606269598007202" green="0.9921298623085022" blue="0.99607473611831665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E.g. Amsterdam" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Prn-f7-JpI">
                                 <rect key="frame" x="20" y="171" width="280" height="30"/>
                                 <constraints>
@@ -67,19 +61,37 @@
                                     <navigationItem title="Quick Weather" id="6vO-2q-Pe8"/>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SD-o6-CWm">
+                                <rect key="frame" x="66" y="279" width="189" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="189" id="rwV-VE-Kgp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcN-uZ-FUf">
+                                <rect key="frame" x="20" y="303" width="280" height="124"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="0.99606269598007202" green="0.9921298623085022" blue="0.99607473611831665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="7SD-o6-CWm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4KD-to-TcN"/>
                             <constraint firstItem="UlV-w8-2kR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-9" id="5qJ-Je-txP"/>
                             <constraint firstItem="gfu-aw-nej" firstAttribute="top" secondItem="9ji-JL-tCj" secondAttribute="bottom" constant="36" id="7Ee-Pa-z4D"/>
                             <constraint firstItem="Prn-f7-JpI" firstAttribute="trailing" secondItem="UcN-uZ-FUf" secondAttribute="trailing" id="9DO-ia-m4d"/>
                             <constraint firstItem="UlV-w8-2kR" firstAttribute="leading" secondItem="9ji-JL-tCj" secondAttribute="leading" id="APY-eB-ghy"/>
+                            <constraint firstItem="7SD-o6-CWm" firstAttribute="top" secondItem="G2x-88-WjU" secondAttribute="bottom" constant="30" id="C8D-Ql-Hvv"/>
                             <constraint firstItem="Prn-f7-JpI" firstAttribute="centerX" secondItem="G2x-88-WjU" secondAttribute="centerX" id="Eah-gh-DyC"/>
                             <constraint firstItem="9ji-JL-tCj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Gd5-Dy-mxS"/>
-                            <constraint firstItem="UcN-uZ-FUf" firstAttribute="top" secondItem="G2x-88-WjU" secondAttribute="bottom" constant="68" id="MK8-Ya-dyv"/>
+                            <constraint firstItem="UcN-uZ-FUf" firstAttribute="top" secondItem="G2x-88-WjU" secondAttribute="bottom" constant="54" id="MK8-Ya-dyv"/>
+                            <constraint firstItem="UcN-uZ-FUf" firstAttribute="top" secondItem="7SD-o6-CWm" secondAttribute="bottom" constant="1" id="Piw-1d-4Z5"/>
                             <constraint firstItem="9ji-JL-tCj" firstAttribute="centerX" secondItem="gfu-aw-nej" secondAttribute="centerX" id="R91-Tq-1tG"/>
                             <constraint firstItem="gfu-aw-nej" firstAttribute="centerX" secondItem="Prn-f7-JpI" secondAttribute="centerX" id="UwI-Hs-qu0"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UcN-uZ-FUf" secondAttribute="bottom" constant="25" id="Xbt-IG-Mh7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UcN-uZ-FUf" secondAttribute="bottom" constant="141" id="Xbt-IG-Mh7"/>
                             <constraint firstItem="gfu-aw-nej" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="73" id="YaG-dO-yNd"/>
                             <constraint firstAttribute="trailing" secondItem="9ji-JL-tCj" secondAttribute="trailing" id="Yeb-fW-Ytb"/>
                             <constraint firstItem="G2x-88-WjU" firstAttribute="top" secondItem="Prn-f7-JpI" secondAttribute="bottom" constant="18" id="bOk-lX-6nV"/>
@@ -94,6 +106,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="cityTextField" destination="Prn-f7-JpI" id="RQJ-XZ-ACi"/>
+                        <outlet property="labelUpcomingDays" destination="7SD-o6-CWm" id="YW4-TQ-nfg"/>
                         <outlet property="resultLabel" destination="UcN-uZ-FUf" id="t0f-J5-SfL"/>
                     </connections>
                 </viewController>

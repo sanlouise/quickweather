@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet var resultLabel: UILabel!
     
     
+    @IBOutlet var labelUpcomingDays: UILabel!
     
     @IBAction func findWeather(sender: AnyObject) {
         
@@ -54,7 +55,11 @@ class ViewController: UIViewController {
                             
                             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                                 
+                                self.labelUpcomingDays.text = "The Next Three Days:"
+                                
                                 self.resultLabel.text = weatherSummary
+                                
+                                
                                 
                             })
                             
