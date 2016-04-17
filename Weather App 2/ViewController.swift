@@ -17,14 +17,11 @@ class ViewController: UIViewController {
         
         var wasSuccessful = false
         let attemptedUrl = NSURL(string: "http://www.weather-forecast.com/locations/" + cityTextField.text!.stringByReplacingOccurrencesOfString(" ", withString: "-") + "/forecasts/latest")
-        
         if let url = attemptedUrl {
             let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) -> Void in
-                
                 if let urlContent = data {
                     let webContent = NSString(data: urlContent, encoding: NSUTF8StringEncoding)
                     // Where to start splitting from.
-                    
                     let websiteArray = webContent!.componentsSeparatedByString("3 Day Weather Forecast Summary:</b><span class=\"read-more-small\"><span class=\"read-more-content\"> <span class=\"phrase\">")
                     
                     // To check whether the values can be found. Good for troubleshooting.
@@ -33,7 +30,6 @@ class ViewController: UIViewController {
                         let weatherArray = websiteArray[1].componentsSeparatedByString("</span>")
                         if weatherArray.count > 1 {
                             wasSuccessful = true
-                            
                             let weatherSummary = weatherArray[0].stringByReplacingOccurrencesOfString("&deg;", withString: "º")
                             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                                 self.labelUpcomingDays.text = String("3-day forecast for " +
@@ -41,7 +37,6 @@ class ViewController: UIViewController {
                                 self.resultLabel.text = weatherSummary
                                 
                             })
-                            
                         }
                     }
                 }
