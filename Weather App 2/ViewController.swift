@@ -52,5 +52,16 @@ class ViewController: UIViewController {
                 self.resultLabel.text = "Oops! Are you sure you entered a real city?"
             }
         }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(cityTextField: UITextField!) -> Bool {
+        cityTextField.resignFirstResponder()  //close the keyboard
+        return true
+        
+    }
+
 }
 
